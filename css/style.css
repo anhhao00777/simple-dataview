@@ -137,10 +137,11 @@ body{
 }
 th, td {
     width: 30px;
-    height: 24px;
+    height: 25px;
     min-height: 24px;
     font-size: 1.3em;
     text-align: center;
+    font-family: monospace;
 }
 td{
     cursor: pointer;
