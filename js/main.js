@@ -63,7 +63,18 @@ document.querySelector(".top-bar").addEventListener("click", async (e)=>{
     });
 })();
 
-
+onresize();
+window.addEventListener("resize", onresize);
+function onresize(){
+    if(window.innerWidth < 1200){
+        document.querySelector(".inner > .rd").style.display = "none";
+    } else{
+        document.querySelector(".inner > .rd").style.display = "";
+    }
+    if(leftView){
+        leftView._load();
+    }
+}
 
 function getFile() {
     return new Promise(async (resolve, reject) => {
