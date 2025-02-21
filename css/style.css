@@ -148,7 +148,7 @@ td{
 }
 .value-gr {
     position: relative;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: consolas, monospace;
     overflow-wrap: anywhere;
     margin: 16px 5px;
