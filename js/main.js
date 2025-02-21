@@ -2,14 +2,14 @@ let leftView;
 let rightView;
 document.querySelector(".top-bar").addEventListener("click", async (e)=>{
     if(e.target.classList[1] == "-file-l"){
-        let f = await getF();
+        let f = await getFile();
         if(leftView) leftView.obj.remove();
         if(f){
             leftView = new DataTableView(document.querySelector(".inner > .lf"), f);
         }
     }
     if(e.target.classList[1] == "-file-r"){
-        let f = await getF();
+        let f = await getFile();
         if(rightView) rightView.obj.remove();
         if(f){
             rightView = new DataTableView(document.querySelector(".inner > .rd"), f);
@@ -65,8 +65,24 @@ document.querySelector(".top-bar").addEventListener("click", async (e)=>{
 
 
 
-async function getF() {
-    let h = await window.showOpenFilePicker();
-    let f = await h[0].getFile();
-    return f;
+function getFile() {
+    return new Promise(async (resolve, reject) => {
+        if (window.showOpenFilePicker) {
+            let h = await window.showOpenFilePicker();
+            let f = await h[0].getFile();
+            resolve(f);
+        } else{
+            let f = document.querySelector("#get-file");
+            if(f){
+                f.onchange = ()=>{
+                    if(f.files[0]){
+                        resolve(f.files[0]);
+                    } else{
+                        reject();
+                    }
+                }
+                f.click();
+            }
+        }
+    });
 }
