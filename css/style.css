@@ -141,7 +141,7 @@ th, td {
     min-height: 24px;
     font-size: 1.3em;
     text-align: center;
-    font-family: monospace;
+    font-family: consolas, monospace;
 }
 td{
     cursor: pointer;
@@ -149,7 +149,7 @@ td{
 .value-gr {
     position: relative;
     font-size: 2em;
-    font-family: monospace;
+    font-family: consolas, monospace;
     overflow-wrap: anywhere;
     margin: 16px 5px;
 }
@@ -180,7 +180,7 @@ input.pos {
     width: 25%;
 }
 .type, .value{
-    font-family: monospace;
+    font-family: consolas, monospace;
 }
 .type {
     margin: 6px 0px;
@@ -190,7 +190,7 @@ input.pos {
 }
 .max-byte {
     font-size: 1.6em;
-    font-family: monospace;
+    font-family: consolas, monospace;
 }
 .search-byte{
     position: relative;
@@ -214,7 +214,7 @@ input.pos {
 .drag-text {
     position: relative;
     font-size: 3.5em;
-    font-family: monospace;
+    font-family: consolas, monospace;
 }
 
 
