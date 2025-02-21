@@ -1,0 +1,220 @@
+.dark{
+    --bg: #000;
+    --color: #fff;
+    --light: #00ffff;
+    --top-bar: 25px;
+    --bottom-bar: 25px;
+    --left-menu: 25%;
+    --right-menu: 20%;
+    --border-size: 2px;
+    --border-color: #ddd;
+    --border-type: solid;
+    --cursor-def: url("");
+    --cursor-poi: url("");
+    --cursor-not-allowed: url("");
+}
+.cs-input{
+    background: #000;
+    color: #fff;
+    border: 2px solid var(--border-color);
+    position: relative;
+    width: calc(90% - 15px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px 0px 2px 0px;
+}
+.cs-input:focus{
+    outline: none;
+    border: 2px solid var(--light);
+}
+.cs-btn{
+    background-color: var(--bg);
+    border: var(--border-size) solid var(--border-color);
+    color: var(--color);
+    user-select: none;
+    cursor: var(--cursor-poi), pointer;
+    outline: none !important;
+    text-align: center;
+    margin: 0px 2px;
+}
+.cs-btn:hover{
+    border: var(--border-size) solid var(--light);
+    color: var(--light);
+}
+.content{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+body{
+    background-color: var(--bg);
+    color: var(--color);
+    cursor: var(--cursor-def), auto;
+}
+.top-bar{
+    position: relative;
+    height: var(--top-bar);
+    width: 100%;
+    border-bottom: var(--border-size) var(--border-type) var(--border-color);
+}
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - var(--top-bar) - var(--bottom-bar) - var(--border-size) - var(--border-size));
+}
+.bottom-bar{
+    position: relative;
+    height: var(--bottom-bar);
+    width: 100%;
+    border-top: var(--border-size) var(--border-type) var(--border-color);
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.row-fl{
+    display: flex;
+    flex-direction: row;
+}
+.data-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+.inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+}
+.lf, .rd {
+    position: relative;
+    width: 100%;
+}
+.buffer-view {
+    position: relative;
+    width: 70%;
+    height: 100%;
+}
+.head-btn{
+    position: relative;
+    width: 100%;
+    height: 55px;
+}
+.table {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 60px);
+}
+.hex-table{
+    border-right: var(--border-size) var(--border-type) var(--border-color);
+}
+.hex-table, .char-table {
+    position: relative;
+    width: 49%;
+    height: 100%;
+}
+.value-view {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.val-view, .misc {
+    position: relative;
+    width: 100%;
+}
+th, td {
+    width: 30px;
+    height: 24px;
+    min-height: 24px;
+    font-size: 1.3em;
+    text-align: center;
+}
+td{
+    cursor: pointer;
+}
+.value-gr {
+    position: relative;
+    font-size: 2em;
+    font-family: monospace;
+    overflow-wrap: anywhere;
+    margin: 16px 5px;
+}
+
+td[data-t="2"]{
+    background-color: #9b9b9b9f;
+}
+td[data-t="3"]{
+    background-color: #b179009f;
+    
+}
+td[data-t="5"]{
+    background-color: #7800c99f;
+    
+}
+.t-item {
+    position: relative;
+    font-size: 1.3em;
+    margin: 0px 8px;
+    cursor: pointer;
+}
+.btn-list{
+    position: relative;
+    margin: 3px 0;
+}
+input.pos {
+    position: relative;
+    width: 25%;
+}
+.type, .value{
+    font-family: monospace;
+}
+.type {
+    margin: 6px 0px;
+}
+.value{
+    margin: 3px 0px;
+}
+.max-byte {
+    font-size: 1.6em;
+    font-family: monospace;
+}
+.search-byte{
+    position: relative;
+    width: 45px;
+    margin: 0 3px;
+}
+.drag-sup {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #00800038;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.drag-text {
+    position: relative;
+    font-size: 3.5em;
+    font-family: monospace;
+}
+
+
+
