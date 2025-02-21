@@ -70,6 +70,7 @@ function onresize(){
         document.querySelector(".inner > .rd").style.display = "none";
     } else{
         document.querySelector(".inner > .rd").style.display = "";
+        if(rightView) rightView._load();
     }
     if(leftView){
         leftView._load();
