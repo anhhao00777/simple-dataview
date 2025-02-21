@@ -141,7 +141,7 @@ th, td {
     min-height: 24px;
     font-size: 1.3em;
     text-align: center;
-    font-family: consolas, monospace;
+    font-family: monospace;
 }
 td{
     cursor: pointer;
