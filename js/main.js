@@ -1,5 +1,7 @@
 let leftView;
 let rightView;
+
+// lazy selector :/
 document.querySelector(".top-bar").addEventListener("click", async (e)=>{
     if(e.target.classList[1] == "-file-l"){
         let f = await getFile();
@@ -16,6 +18,8 @@ document.querySelector(".top-bar").addEventListener("click", async (e)=>{
         }
     }
 });
+
+
 (()=>{
     let dragElm = document.querySelector(".drag-sup");
     let isDr = false;
